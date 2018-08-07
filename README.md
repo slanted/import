@@ -20,10 +20,10 @@ It should be running on localhost:8080 now. Please use Chrome, I didn't make it 
 Looks pretty crappy, but there are a couple of interesting things happening:
 
 1. Open up your Chrome browser's Network tab and checkout the network traffic: Notice that each chunk loads separately, including Polymer, and each Web component
-2. Now comment out both 'my-element' and 'my-other-element' in the dist/index.html and reload.
-3. Notice that the polymer chunk and element chunks go away. 
-4. Now comment out just 'my-other-element'. 'my-element' loads 'my-other-element'. Reload the browser, and notice that it still loads the myotherelement chunk.
-5. Lastly, comment out my-element and leave my-other-element. Notice that polymer and my-other-element loads, but not my-element
+2. Now comment out both all the 'my-element' and 'my-other-element' html elements in the dist/index.html and reload.
+3. Notice that the polymer chunk and both web component chunks go away. 
+4. Now comment out just 'my-other-element'. Note that 'my-element' loads 'my-other-element'. Reload the browser, and notice that it still loads the myotherelement chunk.
+5. Lastly, comment out all of the my-element components and just leave my-other-element. Notice that polymer and my-other-element loads, but <b>not</b> my-element
 
 So its a little like what we used to have with html imports.
 
