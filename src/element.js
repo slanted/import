@@ -1,5 +1,5 @@
 (async ()=> {
-var polymer = await import('@polymer/polymer');
+var polymer = await import(/* webpackChunkName: "polymer" */ '@polymer/polymer');
 var otherElement = await import('./element2.js');
 
 class MyElement extends polymer.PolymerElement {
@@ -15,6 +15,7 @@ class MyElement extends polymer.PolymerElement {
                 This is <b>the </b>message [[message]]
             </div>
             <div>
+                Here is the other element:
                 <my-other-element></my-other-element>
             </div>
         `;

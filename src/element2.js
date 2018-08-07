@@ -10,7 +10,13 @@
 
         static get template() {
             return polymer.html`
-               This is the OTHER ELEMENT! 
+                <style>
+                    button {
+                        color: blue;
+                        background: coral;
+                    }
+                </style>
+                <button>This is the special button</button>
             `;
         }
 

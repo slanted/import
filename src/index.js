@@ -1,16 +1,18 @@
 (async ()=> {
-	var one = await import('./one.js');
-	var jquery = await import('jquery');
+	/**
+	 * Simple async await to show we can load a chunk separately
+	 */
+	var one = await import(/* webpackChunkName: "one" */ './one.js');
 
-	var el = document.querySelector('my-element');
-	console.log("el:",el);
-	if (el) {
-		var element = await import('./element.js');
-	}
+	/**
+	 * And here is are loading all of jquery as another chunk
+	 */
+	var jquery = await import(/* webpackChunkName: "jquery" */ 'jquery');
 
-	// var el2 = document.querySelector('my-other-element');
-	// if (el2) {
-	// 	var element2 = await import('./element2.js');
-	// }
-	console.log("In index");
-	console.log("$:",jquery); })(); 
+	/**
+	 * This will conditionally load in the elements
+	 */
+	await import(/* webpackChunkName: "elements" */ './elementRegistry.js');
+
+	console.log("$:",jquery); 
+})(); 
