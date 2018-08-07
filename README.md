@@ -10,7 +10,9 @@ Then write a 'component detector' that sees what components we have on a page an
 Once you clone this repo, do this:
 
 `>npm install`
+
 `>npm run build`
+
 `>npm run serve`
 
 It should be running on localhost:8080 now. Please use Chrome, I didn't make it work on other Browsers yet.
