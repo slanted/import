@@ -1,3 +1,10 @@
+/**
+ * Again I have to wrap this block in the immediately executing async function so I can use 'await import'
+ * 
+ * Here we just want to see if the html document contains our element, and if so, we load the element's implementation
+ * I was worried that I would have to 'hydrate' the web component. But this works if the script executes after the dom element
+ * is already on the page.
+ */
 (async ()=> {
 	/**
 	 * Here we check the dom to see if we find 'my-element', and conditionally load
