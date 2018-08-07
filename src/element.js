@@ -11,12 +11,20 @@ class MyElement extends polymer.PolymerElement {
 
     static get template() {
         return polymer.html`
+            <style>
+                .myelement {
+                    border:1px solid black;
+                    margin: 10px;
+                }
+            </style>
+            <div class="myelement">
             <div>
-                This is <b>the </b>message [[message]]
+                This my-custom-element and <b>the </b>message [[message]]
             </div>
             <div>
-                Here is the other element:
+                Here is my-other-element included in this element:
                 <my-other-element></my-other-element>
+            </div>
             </div>
         `;
     }
