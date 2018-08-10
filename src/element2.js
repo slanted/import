@@ -1,5 +1,6 @@
 (async () => {
     var polymer = await import('@polymer/polymer');
+    await import('./element3');
 
     class MyOtherElement extends polymer.PolymerElement {
         static get createProperties() {
@@ -16,7 +17,8 @@
                         background: coral;
                     }
                 </style>
-                <button>This is the special button</button>
+                <button>Element 2</button>
+                <my-third></my-third>
             `;
         }
 
