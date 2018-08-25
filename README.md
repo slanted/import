@@ -28,3 +28,5 @@ Looks pretty crappy, but there are a couple of interesting things happening:
 So its a little like what we used to have with html imports.
 
 I wonder if this could be improved upon with something like a babel transform.
+
+CHANGE
